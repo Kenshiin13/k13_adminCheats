@@ -1,3 +1,5 @@
+import CommandInterface from "../../Command/interfaces/CommandInterface";
+
 export default interface DefaultMenuInterface {
-	open(): void;
+	open(commands: Record<string, CommandInterface>): void;
 }

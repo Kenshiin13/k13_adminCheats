@@ -1,4 +1,9 @@
-import CheatMenuComponent from "./Components/CheatMenu/CheatMenuComponent";
+import CheatMenu from "./Components/CheatMenu/CheatMenu";
+import Aimbot from "./Components/Command/Aimbot";
+import CommandInterface from "./Components/Command/interfaces/CommandInterface";
 import ESXMenuDefault from "./Components/DefaultMenu/ESXDefaultMenu";
 
-const cheatMenu = new CheatMenuComponent(new ESXMenuDefault());
+const aimbotCommand = new Aimbot("aimbot", "Aimbot");
+
+const cheatMenu = new CheatMenu(new ESXMenuDefault());
+cheatMenu.registerCommand(aimbotCommand);
